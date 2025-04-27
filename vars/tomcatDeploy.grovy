@@ -1,4 +1,4 @@
-Def call () {
+def call () {
 sshagent(['tomcat-11-ec2']) {
    sh 'scp -o StrictHostKeyChecking=no target/hr-api.war ec2-user@65.0.199.74:/opt/tomcat11/webapps/'
    sh 'ssh ec2-user@65.0.199.74 /opt/tomcat11/bin/shutdown.sh'
